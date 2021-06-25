@@ -1,0 +1,47 @@
+.item {
+    margin: 1rem;
+}
+
+.contentstation{
+    display: inline-block;
+    text-align: left;
+    padding: 1rem 2rem;
+}
+
+.contentstation h3{
+    font-size: 1.25rem;
+    color: black;
+}
+
+.contentpetrol{
+    /* display: inline-block; */
+    text-align: center;
+    padding: 1rem 1rem;
+}
+
+.contentpetrol h3{
+    /* display: inline-block; */
+    font-size: 1.25rem;
+    color: black;
+}
+
+.actions {
+    /* padding: 1.5rem; */
+    text-align: center;
+  }
+  
+.actions button {
+    font: inherit;
+    cursor: pointer;
+    color: #591baa;
+    border: 3px solid #1a209b;
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    margin: 5px;
+  }
+
+.actions button:hover,
+.actions button:active {
+  background-color: #d5e0eb;
+}

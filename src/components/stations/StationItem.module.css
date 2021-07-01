@@ -45,3 +45,12 @@
 .actions button:active {
   background-color: #d5e0eb;
 }
+
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}

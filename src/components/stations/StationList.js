@@ -1,6 +1,6 @@
 import StationItem from './StationItem';
 import classes from './StationList.module.css';
-import PetrolItem from './PetrolItem';
+
 
 function StationList(props) {
     return (
@@ -13,19 +13,12 @@ function StationList(props) {
             voivodeship={station.location.voivodeship}
             city_name={station.location.city_name}
             street_name={station.location.street_name}
-            fuel_type={station.fuel["0"].fuel_type}
-            fuel_price={station.fuel["0"].fuel_price_info.value}
+            fuel_p98={station.fuels.fuel_p98.fuel_type}
+            fuel_p98_price={station.fuels.fuel_p98.fuel_price}
+            fuel_on={station.fuels.fuel_on.fuel_type}
+            fuel_on_price={station.fuels.fuel_on.fuel_price}
           />
-          
         ))}
-        {/* {props.stations.map((fuel) => (
-          <PetrolItem
-            fuel_type={fuel.fuel["0"].fuel_type}
-            fuel_price={fuel.fuel["0"].fuel_price_info.value}
-          />
-        ))} */}
-
-
       </ul>
     );
 }

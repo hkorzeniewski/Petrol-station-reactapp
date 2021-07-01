@@ -18,7 +18,16 @@ function NewStationForm (props) {
 
         const stationData = {
             station_name: enteredStationName,
-            fuel: [],
+            fuels: {
+                fuel_on: {
+                    fuel_type: "ON",
+                    fuel_price: "not added"
+                },
+                fuel_p98: {
+                    fuel_type: "P98",
+                    fuel_price: "not added"
+                } 
+            },
             location: {
                 voivodeship: enteredLocationVoivodeship,
                 city_name: enteredLocationCityName,

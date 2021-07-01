@@ -6,16 +6,16 @@ function NewStationsPage() {
 
     function addStationHandler(stationData){
         fetch(
-            'http://127.0.0.1:8000/stations/',
-            {
-                method: 'POST',
-                body: JSON.stringify(stationData),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            }
+          "https://react-petrol-app-default-rtdb.europe-west1.firebasedatabase.app/stations.json",
+          {
+            method: "POST",
+            body: JSON.stringify(stationData),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
         ).then(() => {
-            history.replace('/')
+          history.replace("/");
         });
     }
 

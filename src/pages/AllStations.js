@@ -9,14 +9,28 @@ function AllStationsPage() {
     useEffect(() => {
         setIsLoading(true);
         fetch(
-            'http://127.0.0.1:8000/stations/'
-        ).then(response => {
-                return response.json();
-    }).then(data => {   
-        setIsLoading(false);
-        setLoadedStations(data);
-        console.log(data['0'].fuel['0'].fuel_type)
-    })
+          "https://react-petrol-app-default-rtdb.europe-west1.firebasedatabase.app/stations.json"
+        )
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            const stations = [];
+
+            for (const key in data){
+                
+                const station = {
+                    id: key,
+                    ...data[key]
+
+                }
+                // console.log(station)
+                stations.push(station);
+            }
+            console.log(stations)
+            setIsLoading(false);
+            setLoadedStations(stations);
+          });
     
     }, []);
 

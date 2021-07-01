@@ -2,7 +2,7 @@ import { Route, Switch } from 'react-router-dom'
 import AllStationsPage from './pages/AllStations';
 import NewStationsPage from './pages/NewStation';
 import MyStationsPage from './pages/MyStations';
-import MainNavigation from './components/layout/MainNavigation';
+
 import Layout from './components/layout/Layout';
 
 function App() {
